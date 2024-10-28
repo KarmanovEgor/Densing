@@ -1,13 +1,10 @@
 
 import { waysImages } from "../constants/constWays";
 import "./Ways.css";
-import { useNavigate } from "react-router-dom";
 
-export default function Ways() {
-  const navigate = useNavigate();
-  const handleClick = (path) => {
-    navigate(path);
-  };
+
+export default function Ways({handleClick}) {
+
   return (
     <section className="ways page__size">
       <div className="ways__container">

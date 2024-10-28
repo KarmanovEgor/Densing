@@ -2,10 +2,14 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./Header/Header";
 import Popup from "./Popup/Popup";
 import { useCallback, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./App.css";
 import Promo from "./Promo/Promo";
 import Ways from "./Ways/Ways";
 import About from "./About/About";
+import Coaches from "./Coaches/Coaches";
+import Way from "./Ways/Way";
+import { actor, ballet, kontemp, stretch } from "./constants/constWays";
 
 function App() {
   const [isOpenPopup, setIsOpenPopup] = useState(false);
@@ -55,6 +59,11 @@ function App() {
     return () => document.removeEventListener("keydown", handleESC);
   }, [isOpen, closePopup]);
 
+  const navigate = useNavigate();
+  const handleClick = (path) => {
+    navigate(path);
+  };
+
   return (
     <div className="page__content">
       <Routes>
@@ -65,14 +74,76 @@ function App() {
               <Header openPopup={openPopup} />
               <Promo />
               <main className="content">
-                <Ways />
+                <Ways handleClick={handleClick}/>
                 <About />
+                <Coaches />
               </main>
               {/* <Footer /> */}
               <Popup isOpen={isOpenPopup} onClose={closePopup} />
             </>
           }
+          
         ></Route>
+         <Route
+  path="/kontemp"
+  element={
+    <>
+      <Header openPopup={openPopup} />
+      <main className="content">
+        <Way 
+          kontemp={kontemp} 
+          openPopup={openPopup} 
+        />
+      </main>
+      <Popup isOpen={isOpenPopup} onClose={closePopup} />
+    </>
+  }
+/>
+<Route
+  path="/stretch"
+  element={
+    <>
+      <Header openPopup={openPopup} />
+      <main className="content">
+        <Way 
+          stretch={stretch} 
+          openPopup={openPopup} 
+        />
+      </main>
+      <Popup isOpen={isOpenPopup} onClose={closePopup} />
+    </>
+  }
+/>
+<Route
+  path="/actor"
+  element={
+    <>
+      <Header openPopup={openPopup} />
+      <main className="content">
+        <Way 
+          actor={actor} 
+          openPopup={openPopup} 
+        />
+      </main>
+      <Popup isOpen={isOpenPopup} onClose={closePopup} />
+    </>
+  }
+/>
+<Route
+  path="/ballet"
+  element={
+    <>
+      <Header openPopup={openPopup} />
+      <main className="content">
+        <Way 
+          ballet={ballet} 
+          openPopup={openPopup} 
+        />
+      </main>
+      <Popup isOpen={isOpenPopup} onClose={closePopup} />
+    </>
+  }
+/>
       </Routes>
     </div>
   );

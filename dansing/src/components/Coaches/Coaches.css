@@ -1,0 +1,23 @@
+.coaches__container {
+    display: flex;
+    flex-wrap: wrap;
+justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+    padding-bottom: 30px;
+}
+.coaches__block {
+    max-width: 500px;
+    display: flex;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.coaches__block:hover {
+    transform: scale(1.1);
+}
+.coaches__img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}

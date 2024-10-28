@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section className="about page__size">
       <h2 className="about__title">
-        Добро пожаловать в школу хареографии «Азбука Балета»
+        Добро пожаловать в школу хореографии «Азбука Балета»
       </h2>
       <div className="about__container">
         <div className="about__block-left">
@@ -50,7 +50,7 @@ export default function About() {
           <div className="about__block-text">
             <h3 className="about__subtitle">Ольга</h3>
             <p className="about__text about__text-right">
-              Руководитель школы хареографии
+              Руководитель школы хореографии
             </p>
           </div>
         </div>
