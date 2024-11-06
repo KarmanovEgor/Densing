@@ -6,7 +6,7 @@ import imgAbout from "../../images/gallery9.jpg";
 
 export default function About() {
   return (
-    <section className="about page__size">
+    <section className="about page__size" id="about">
       <h2 className="about__title">
         Добро пожаловать в школу хореографии «Азбука Балета»
       </h2>

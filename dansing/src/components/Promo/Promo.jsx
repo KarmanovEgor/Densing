@@ -7,8 +7,8 @@ import promo2 from '../../images/main4.jpg'
 export default function Promo() {
     const phoneNumber = "+79039960767";
   return (
-    <section className="promo ">
-      <div className="promo__container page__size">
+    <section className="promo" id="main">
+      <div  className="promo__container page__size">
       <div className="promo__images">
             <img src={promo2} title="Изображение балерины" alt="Изображение балерины"className="promo__img promo__img-left"></img>
             <img src={promo1} title="Изображение балерины" alt="Изображение балерины"className="promo__img promo__img-right"  ></img>

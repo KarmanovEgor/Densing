@@ -3,10 +3,10 @@ import { waysImages } from "../constants/constWays";
 import "./Ways.css";
 
 
-export default function Ways({handleClick}) {
+export default function Ways({handleClick, handleClickSrol}) {
 
   return (
-    <section className="ways page__size">
+    <section className="ways page__size" id="way">
       <div className="ways__container">
         <div className="ways__grid">
           {waysImages.map((ways, index) => (

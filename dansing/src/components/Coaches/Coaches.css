@@ -1,10 +1,13 @@
 .coaches__container {
     display: flex;
     flex-wrap: wrap;
-justify-content: space-between;
+justify-content: flex-start;
+flex-wrap: wrap;
     width: 100%;
-    gap: 15px;
+    gap: 300px;
     padding-bottom: 30px;
+    padding-top: 30px;
+    row-gap: 50px;
 }
 .coaches__block {
     max-width: 500px;

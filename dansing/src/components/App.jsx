@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./Header/Header";
 import Popup from "./Popup/Popup";
 import { useCallback, useEffect, useState } from "react";
@@ -10,6 +10,10 @@ import About from "./About/About";
 import Coaches from "./Coaches/Coaches";
 import Way from "./Ways/Way";
 import { actor, ballet, kontemp, stretch } from "./constants/constWays";
+import Coach from "./Coaches/Coach";
+import Advance from "./Advance/Advance";
+import Slider from "./Slider/Slider";
+import Maps from "./Maps/Maps";
 
 function App() {
   const [isOpenPopup, setIsOpenPopup] = useState(false);
@@ -20,30 +24,6 @@ function App() {
   const openPopup = () => {
     setIsOpenPopup(true);
   };
-  // Находим элемент, к которому нужно прокрутить
-  useEffect(() => {
-    const btnHeader = document.querySelectorAll(".header__link");
-
-    btnHeader.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        const targetId = e.target.getAttribute("href").substring(1);
-        const section = document.getElementById(targetId);
-        section.scrollIntoView({ behavior: "smooth" });
-      });
-    });
-
-    return () => {
-      btnHeader.forEach((btn) => {
-        btn.removeEventListener("click", (e) => {
-          e.preventDefault();
-          const targetId = e.target.getAttribute("href").substring(1);
-          const section = document.getElementById(targetId);
-          section.scrollIntoView({ behavior: "smooth" });
-        });
-      });
-    };
-  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -64,6 +44,45 @@ function App() {
     navigate(path);
   };
 
+  const location = useLocation(); // Получаем текущий маршрут
+
+  useEffect(() => {
+    const btnHeader = document.querySelectorAll(
+      ".header__link, .header__link-main"
+    );
+
+    const handleClick = (e) => {
+      e.preventDefault();
+      const targetId = e.target.getAttribute("href").substring(1);
+
+      if (location.pathname === '/') {
+        // Если маршрут /
+        const section = document.getElementById(targetId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // Если маршрут не /
+        navigate('/'); // Перенаправляем на /
+        setTimeout(() => {
+          const section = document.getElementById(targetId);
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 0); // Небольшая задержка для смены маршрута
+      }
+    };
+
+    btnHeader.forEach((btn) => {
+      btn.addEventListener("click", handleClick);
+    });
+
+    return () => {
+      btnHeader.forEach((btn) => {
+        btn.removeEventListener("click", handleClick);
+      });
+    };
+  }, [location, navigate]);
   return (
     <div className="page__content">
       <Routes>
@@ -71,79 +90,88 @@ function App() {
           path="/*"
           element={
             <>
-              <Header openPopup={openPopup} />
+              <Header
+                openPopup={openPopup}
+              />
               <Promo />
               <main className="content">
-                <Ways handleClick={handleClick}/>
+                <Ways handleClick={handleClick} />
                 <About />
-                <Coaches />
+                <Coaches
+                  handleClick={handleClick}
+                />
+                <Slider />
               </main>
+              <Maps handleClick={handleClick} />
               {/* <Footer /> */}
               <Popup isOpen={isOpenPopup} onClose={closePopup} />
             </>
           }
-          
         ></Route>
-         <Route
-  path="/kontemp"
-  element={
-    <>
-      <Header openPopup={openPopup} />
-      <main className="content">
-        <Way 
-          kontemp={kontemp} 
-          openPopup={openPopup} 
+        <Route
+          path="/kontemp"
+          element={
+            <>
+              <Header openPopup={openPopup} />
+              <main className="content">
+                <Way kontemp={kontemp} openPopup={openPopup} />
+              </main>
+              <Advance />
+              <Popup isOpen={isOpenPopup} onClose={closePopup} />
+            </>
+          }
         />
-      </main>
-      <Popup isOpen={isOpenPopup} onClose={closePopup} />
-    </>
-  }
-/>
-<Route
-  path="/stretch"
-  element={
-    <>
-      <Header openPopup={openPopup} />
-      <main className="content">
-        <Way 
-          stretch={stretch} 
-          openPopup={openPopup} 
+        <Route
+          path="/stretch"
+          element={
+            <>
+              <Header openPopup={openPopup} />
+              <main className="content">
+                <Way stretch={stretch} openPopup={openPopup} />
+              </main>
+              <Advance />
+              <Popup isOpen={isOpenPopup} onClose={closePopup} />
+            </>
+          }
         />
-      </main>
-      <Popup isOpen={isOpenPopup} onClose={closePopup} />
-    </>
-  }
-/>
-<Route
-  path="/actor"
-  element={
-    <>
-      <Header openPopup={openPopup} />
-      <main className="content">
-        <Way 
-          actor={actor} 
-          openPopup={openPopup} 
+        <Route
+          path="/actor"
+          element={
+            <>
+              <Header openPopup={openPopup} />
+              <main className="content">
+                <Way actor={actor} openPopup={openPopup} />
+              </main>
+              <Advance />
+              <Popup isOpen={isOpenPopup} onClose={closePopup} />
+            </>
+          }
         />
-      </main>
-      <Popup isOpen={isOpenPopup} onClose={closePopup} />
-    </>
-  }
-/>
-<Route
-  path="/ballet"
-  element={
-    <>
-      <Header openPopup={openPopup} />
-      <main className="content">
-        <Way 
-          ballet={ballet} 
-          openPopup={openPopup} 
+        <Route
+          path="/ballet"
+          element={
+            <>
+              <Header openPopup={openPopup} />
+              <main className="content">
+                <Way ballet={ballet} openPopup={openPopup} />
+              </main>
+              <Advance />
+              <Popup isOpen={isOpenPopup} onClose={closePopup} />
+            </>
+          }
         />
-      </main>
-      <Popup isOpen={isOpenPopup} onClose={closePopup} />
-    </>
-  }
-/>
+        <Route
+          path="/coaches"
+          element={
+            <>
+              <Header openPopup={openPopup} />
+              <main className="content">
+                <Coach openPopup={openPopup} />
+              </main>
+              <Popup isOpen={isOpenPopup} onClose={closePopup} />
+            </>
+          }
+        />
       </Routes>
     </div>
   );

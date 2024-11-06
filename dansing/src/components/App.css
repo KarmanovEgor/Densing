@@ -25,6 +25,8 @@
   margin-top: 50px;
   width: 100%;
   box-sizing: border-box;
+  padding-left: 38px;
+  padding-right: 38px;
  
  }
  .image__size {
@@ -51,7 +53,7 @@
 
   @media (max-width: 768px) {
     .page__size {
-
+       margin-top: 30px;
         padding-left: 38px;
         padding-right: 38px;
     }
@@ -85,10 +87,11 @@
    --lightblack-color: rgb(34, 34, 34);
    --lightblack-ops-color: rgb(34, 34, 34, 0.8);
    --grey-color: rgb(187, 187, 187);
-   --acent-color:rgb(245, 89, 13);
+   --acent-color:rgb(246,118,142);
    --font-color: rgb(255, 255, 255);
    --lightgrey-color: rgba(246, 246, 246, 1);
    ;
  
  
  }
+ /* --acent-color:rgb(245, 89, 13); */

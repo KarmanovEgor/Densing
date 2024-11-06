@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "./Way.css"
 
+
 export default function Way({ kontemp, stretch, actor, ballet }) {
   const location = useLocation();
 
@@ -57,6 +58,7 @@ console.log(data)
           Расписание
         </Link>
       </div>
+  
     </section>
   );
 }

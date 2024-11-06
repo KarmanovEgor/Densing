@@ -16,32 +16,27 @@ const Burger = () => {
         }`}
       >
         <li className="header__links">
-          <a href="#main" className="header__link">
-            Главная
-          </a>
-        </li>
-        <li className="header__links">
-          <a href="#About" className="header__link">
+          <a href="#about" className="header__link">
             О школе
           </a>
         </li>
         <li className="header__links">
-          <a href="#ways" className="header__link">
+          <a href="#way" className="header__link">
             Направления
           </a>
         </li>
         <li className="header__links">
-          <a href="#contact" className="header__link">
-            Преимущества
+          <a href="#gallery" className="header__link">
+            Галерея
           </a>
         </li>
         <li className="header__links">
-          <a href="#contact" className="header__link">
+          <a href="#coach" className="header__link">
             Тренера
           </a>
         </li>
         <li className="header__links">
-          <a href="#contact" className="header__link">
+          <a href="#contacts" className="header__link">
             Контакты
           </a>
         </li>

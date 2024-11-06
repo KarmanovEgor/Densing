@@ -2,10 +2,10 @@ import { coachImages } from "../constants/constCoaches";
 import './Coaches.css'
 
 
-export default function Coaches({handleClick}) {
+export default function Coaches({handleClick, handleClickSrol}) {
 
     return(
-<section className="coaches page__size">
+<section className="coaches page__size" id="coach">
 <h2 className="coaches__title">Тренерский состав</h2>
 <div className="coaches__container">
 {coachImages.map((item, index) => (

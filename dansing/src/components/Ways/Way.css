@@ -37,9 +37,26 @@ flex-direction: column;
     padding: 10px 20px 10px 20px;
     border: 2px  solid var(--acent-color);
     border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
 }
 .way__items {
 display: flex;
 justify-content: flex-start;
 gap: 50px;
+}
+@media (max-width: 768px) {
+.way__items {
+ flex-wrap: wrap;
+    gap: 30px;
+    }
+.way__block-up, .way__block-middle, .way__block-down, .way__container {
+        gap: 10px;
+    }
+    .way__items {
+        padding-bottom: 15px;
+    }
+    .way__container {
+        padding-top: 20px;
+    }
 }

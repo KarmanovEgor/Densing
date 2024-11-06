@@ -1,0 +1,30 @@
+.slider__container {
+    width: 100%; 
+    position: relative;
+    padding-bottom: 50px;
+    overflow: hidden;   
+}
+
+.slider-wrapper {
+    display: flex; 
+    transition: transform 0.3s linear; 
+}
+
+.slider__imgs {
+    min-width: 25%; 
+    flex-shrink: 0; /* Не позволяет слайдам сжиматься */
+}
+
+.slider__img {
+    border-radius: 10px;
+    width: 100%; 
+    display: block; 
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    .slider__imgs {
+      width: 100%; 
+    }
+}
