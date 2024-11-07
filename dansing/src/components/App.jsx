@@ -14,6 +14,7 @@ import Coach from "./Coaches/Coach";
 import Advance from "./Advance/Advance";
 import Slider from "./Slider/Slider";
 import Maps from "./Maps/Maps";
+import Footer from "./Footer/Footer";
 
 function App() {
   const [isOpenPopup, setIsOpenPopup] = useState(false);
@@ -50,7 +51,6 @@ function App() {
     const btnHeader = document.querySelectorAll(
       ".header__link, .header__link-main"
     );
-
     const handleClick = (e) => {
       e.preventDefault();
       const targetId = e.target.getAttribute("href").substring(1);
@@ -103,7 +103,7 @@ function App() {
                 <Slider />
               </main>
               <Maps handleClick={handleClick} />
-              {/* <Footer /> */}
+              <Footer />
               <Popup isOpen={isOpenPopup} onClose={closePopup} />
             </>
           }
@@ -117,6 +117,7 @@ function App() {
                 <Way kontemp={kontemp} openPopup={openPopup} />
               </main>
               <Advance />
+              <Footer />
               <Popup isOpen={isOpenPopup} onClose={closePopup} />
             </>
           }
@@ -130,6 +131,7 @@ function App() {
                 <Way stretch={stretch} openPopup={openPopup} />
               </main>
               <Advance />
+              <Footer />
               <Popup isOpen={isOpenPopup} onClose={closePopup} />
             </>
           }
@@ -143,6 +145,7 @@ function App() {
                 <Way actor={actor} openPopup={openPopup} />
               </main>
               <Advance />
+              <Footer />
               <Popup isOpen={isOpenPopup} onClose={closePopup} />
             </>
           }
@@ -156,6 +159,7 @@ function App() {
                 <Way ballet={ballet} openPopup={openPopup} />
               </main>
               <Advance />
+              <Footer />
               <Popup isOpen={isOpenPopup} onClose={closePopup} />
             </>
           }
@@ -168,6 +172,7 @@ function App() {
               <main className="content">
                 <Coach openPopup={openPopup} />
               </main>
+              <Footer />
               <Popup isOpen={isOpenPopup} onClose={closePopup} />
             </>
           }

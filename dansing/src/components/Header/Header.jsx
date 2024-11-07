@@ -17,7 +17,7 @@ export default function Header({handleNavigateAndScroll}) {
       <div className="header__container">
         <div className="header__block">
           <Link to='/' className="header__link-home"></Link>
-          <a href="#main" className="header__link-main" onClick={(e) => { e.preventDefault(); handleNavigateAndScroll('/', 'promo'); }} >
+          <a href="#main" className="header__link-main" >
             Главная
           </a>
         </div>

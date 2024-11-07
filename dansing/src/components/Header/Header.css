@@ -42,6 +42,10 @@
   border-radius: 10px;
 
 }
+.header__link-home:hover {
+  transform: scale(1.2); /* Увеличиваем размер изображения */
+  filter: brightness(110%); 
+}
 
 .header__lists {
   display: flex;
@@ -78,7 +82,7 @@ select {
   height: 50px; 
 }
 
-.header__links {
+.header__links, .header__link-main{
   transition: transform 0.3s, filter 0.3s; /* Добавляем плавную анимацию для увеличения и изменения цвета */
 }
 
@@ -87,6 +91,11 @@ select {
   filter: brightness(110%); /* Подсвечиваем изображение */
   color: var(--acent-color);
   
+}
+.header__link-main:hover{
+  transform: scale(1.2); /* Увеличиваем размер изображения */
+  filter: brightness(110%); /* Подсвечиваем изображение */
+  color: var(--acent-color);
 }
 .header__link:hover {
   color: var(--blue-color);

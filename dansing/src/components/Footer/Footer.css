@@ -1,0 +1,18 @@
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ z-index: 3;
+    height: 50px;
+}
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1340px;
+    width: 100%;
+    align-items: center;
+    padding: 5px 27px 5px 27px;
+    box-sizing: border-box;
+    background-color: var(--black-color);
+    z-index: 10;
+}

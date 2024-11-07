@@ -1,0 +1,43 @@
+.dev {
+    position: relative;
+    z-index: 4;
+    display: flex;
+
+    /* max-width: 400px;
+    width: 100%; */
+}
+
+.dev__developers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+/* Скрыть блоки с иконками по умолчанию */
+
+.dev__hoverable {
+    color: var(--font-color);
+    margin: 0 auto;
+
+}
+
+.dev__hoverable:hover {
+    color: var(--acent-color);
+    cursor: pointer;
+    
+}
+
+.dev__links {
+    display: flex;
+   gap: 10px;
+
+
+   transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+
+}
+
+.dev__link {
+    color: var(--font-color);
+    text-decoration: none;
+}

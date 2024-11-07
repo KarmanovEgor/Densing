@@ -1,6 +1,6 @@
-import coach from "../../images/kontemp1.jpg";
-import coach1 from "../../images/stretching.jpg";
-import coach2 from "../../images/stretching.jpg";
+import coach from "../../images/coach.jpg";
+import coach1 from "../../images/coach1.jpg";
+import coach2 from "../../images/coach2.jpg";
 
 const coachImages = [
   {
