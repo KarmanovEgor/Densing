@@ -9,7 +9,7 @@ export default function Coach(){
     <h2 className="coach__title">Наши преподаватели</h2>
     <div className="coach__cards">
        {coachImages.map((item, index) =>( <div className="coach__card" key={index}>
-            <img src={item.img} alt={item.alt} title={item.alt} className="coach__img" />
+            <img src={item.img} alt={item.alt} title={item.alt} className="coach__img" loading="lazy"/>
             <div className="coach__block-text">
                 <h3 className="coach__name">{item.title}</h3>
                 <p className="coach__prof">{item.prof}</p>

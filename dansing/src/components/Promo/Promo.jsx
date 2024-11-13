@@ -10,8 +10,8 @@ export default function Promo() {
     <section className="promo" id="main">
       <div  className="promo__container page__size">
       <div className="promo__images">
-            <img src={promo2} title="Изображение балерины" alt="Изображение балерины"className="promo__img promo__img-left"></img>
-            <img src={promo1} title="Изображение балерины" alt="Изображение балерины"className="promo__img promo__img-right"  ></img>
+            <img src={promo2} title="Изображение балерины" alt="Изображение балерины"className="promo__img promo__img-left" loading="lazy"></img>
+            <img src={promo1} title="Изображение балерины" alt="Изображение балерины"className="promo__img promo__img-right" loading="lazy"></img>
         </div>
         <h1 className="promo__title">ШКОЛА КЛАССИЧЕСКОЙ ХАРЕОГРАФИИ</h1>
         <div className="promo__block-subtitle">

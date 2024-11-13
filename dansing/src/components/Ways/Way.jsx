@@ -33,6 +33,7 @@ return (
           alt={data.alt}
           title={data.alt}
           className="way__img"
+          loading="lazy"
         />
         <p className="way__text">{data.subtitle}</p>
       </div>

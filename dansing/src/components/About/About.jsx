@@ -27,6 +27,7 @@ export default function About() {
               alt="руководитель студии"
               title="руководитель студии"
               className="about__img-left"
+              loading="lazy"
             />
             <div className="about__part-right">
             <Messengers />
@@ -46,6 +47,7 @@ export default function About() {
             alt="руководитель студии"
             title="руководитель студии"
             className="about__img-right"
+            loading="lazy"
           />
           <div className="about__block-text">
             <h3 className="about__subtitle">Ольга</h3>

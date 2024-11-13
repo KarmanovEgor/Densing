@@ -83,7 +83,7 @@ const Slider = () => {
         <div className="slider-wrapper" style={{ transform: `translateX(-${(offset * 100) / slidesToShow}%)` }}>
           {images.map((image, index) => (
             <div className="slider__imgs" key={index}>
-              <img src={image} alt={`изображение студии балета ${index}`} className='slider__img'/>
+              <img src={image} alt={`изображение студии балета ${index}`} className='slider__img' loading="lazy"/>
             </div>
           ))}
         </div>

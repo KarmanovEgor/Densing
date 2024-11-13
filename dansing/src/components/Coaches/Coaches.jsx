@@ -10,7 +10,7 @@ export default function Coaches({handleClick, handleClickSrol}) {
 <div className="coaches__container">
 {coachImages.map((item, index) => (
  <div key={index} className="coaches__block"  onClick={() => handleClick(item.way)}>
-     <img src={item.img} alt={item.alt} title={item.alt} className="coaches__img" />
+     <img src={item.img} alt={item.alt} title={item.alt} className="coaches__img" loading="lazy"/>
      <div className="coaches__block-text">
     <h3 className="coaches__subtitle">{item.title}</h3>
     <p className="coaches__prof">{item.prof}</p>

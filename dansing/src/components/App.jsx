@@ -37,16 +37,12 @@ function App() {
 
     // Отправляем данные в Яндекс.Метрику при первом рендере
     handleHit();
-
     // Обработчик изменения маршрута
     const handleRouteChange = () => {
       handleHit();
     };
-
-
     // Отслеживаем события на глобальном уровне
     window.addEventListener('popstate', handleRouteChange);
-
     // Возвращаем функцию очистки
     return () => {
       window.removeEventListener('popstate', handleRouteChange);

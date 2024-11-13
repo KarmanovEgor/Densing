@@ -23,6 +23,7 @@ export default function Ways({handleClick, handleClickSrol}) {
                 alt={ways.alt}
                 src={ways.img}
                 onClick={() => handleClick(ways.way)}
+                loading="lazy"
               />
             </div>
           ))}
