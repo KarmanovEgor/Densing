@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './Messengers.css';
 
 export default function Messengers () {
-    const phoneNumber = "+79039960767";
+    const phoneNumber = "+79235665373";
 
     return (
 <ul className="messengers">

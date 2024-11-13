@@ -29,7 +29,8 @@
     max-height: 100px; /* Установите максимальную высоту, чтобы текст мог отображаться */
     opacity: 1;
     background-color: var(--acent-color);
-    padding: 20px;
+    padding: 20px 20px 60px 20px;
     border-radius: 15px;
+    margin: 0;
   }
   

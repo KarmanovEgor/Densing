@@ -21,7 +21,7 @@ if (!data || !data.age || data.age.length === 0) {
 }
 
 const hasPriceDataChild = data.priceChild && data.priceChild.length > 0;
-const hasPriceDataAdult = data.price && data.price.length > 0;
+const hasPriceDataAdult = data.priceAdult && data.priceAdult.length > 0;
 
 return (
   <section className="way page__size">
@@ -65,7 +65,7 @@ return (
           <>
             <h3 className="way__subtitle">{data.priceTitleAdult}</h3>
             <div className="way__items">
-              {data.price.map((item, index) => (
+              {data.priceAdult.map((item, index) => (
                 <div key={index} className="way__item">
                   <h3 className="way__age-title">{item.during}</h3>
                   <p className="way__age">{item.coast}</p>

@@ -1,36 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import './Slider.css'; 
 import gallery from '../../images/gallery.jpg';
-import gallery1 from '../../images/gallery1.jpg';
-import gallery2 from '../../images/gallery2.jpg';
-import gallery3 from '../../images/gallery3.jpg';
+// import gallery1 from '../../images/gallery1.jpg';
+// import gallery2 from '../../images/gallery2.jpg';
+// import gallery3 from '../../images/gallery3.jpg';
 import gallery4 from '../../images/gallery4.jpg';
-import gallery5 from '../../images/gallery5.jpg';
+// import gallery5 from '../../images/gallery5.jpg';
 import gallery6 from '../../images/gallery6.jpg';
 import gallery7 from '../../images/gallery7.jpg';
-import gallery8 from '../../images/gallery8.jpg';
-import gallery9 from '../../images/gallery9.jpg';
+// import gallery8 from '../../images/gallery8.jpg';
+// import gallery9 from '../../images/gallery9.jpg';
 import gallery10 from '../../images/gl1.jpg';
 import gallery11 from '../../images/gl2.jpg';
 import gallery12 from '../../images/gl3.jpg';
-import gallery13 from '../../images/gl4.jpg';
+import gallery14 from '../../images/gl5.JPG';
+import gallery15 from '../../images/gl6.JPG';
+import gallery16 from '../../images/gl7.JPG';
+import gallery17 from '../../images/gl8.jpg';
+import gallery18 from '../../images/gl9.jpg';
+import gallery19 from '../../images/gl10.jpg';
+import gallery20 from '../../images/gl11.jpg';
+import gallery21 from '../../images/gl12.jpg';
+
 
 const Slider = () => {
   const images = [
     gallery,
-    gallery1,
-    gallery2,
-    gallery3,
+    // gallery1,
+    // gallery2,
+    // gallery3,
     gallery4,
-    gallery5,
+    // gallery5,
     gallery6,
     gallery7,
-    gallery8,
-    gallery9,
+    // gallery8,
+    // gallery9,
     gallery10,
     gallery11,
     gallery12,
-    gallery13,
+    gallery14,
+    gallery15,
+    gallery16,
+    gallery17,
+    gallery18,
+    gallery19,
+    gallery20,
+    gallery21,
+
   ];
 
   const [offset, setOffset] = useState(0);

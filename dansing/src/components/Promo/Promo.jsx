@@ -5,7 +5,7 @@ import promo1 from '../../images/Promo1.jpg'
 import promo2 from '../../images/main4.jpg'
 
 export default function Promo() {
-    const phoneNumber = "+79039960767";
+    const phoneNumber = "+79235665373";
   return (
     <section className="promo" id="main">
       <div  className="promo__container page__size">

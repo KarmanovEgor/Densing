@@ -25,6 +25,33 @@ function App() {
   const openPopup = () => {
     setIsOpenPopup(true);
   };
+  const location = useLocation();
+  useEffect(() => {
+    const handleHit = () => {
+      if (window.Ya && window.Ya.Metrika) {
+        window.Ya.Metrika.hit(location.pathname, {
+          title: document.title,
+        });
+      }
+    };
+
+    // Отправляем данные в Яндекс.Метрику при первом рендере
+    handleHit();
+
+    // Обработчик изменения маршрута
+    const handleRouteChange = () => {
+      handleHit();
+    };
+
+
+    // Отслеживаем события на глобальном уровне
+    window.addEventListener('popstate', handleRouteChange);
+
+    // Возвращаем функцию очистки
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+    };
+  }, [location]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -45,7 +72,7 @@ function App() {
     navigate(path);
   };
 
-  const location = useLocation(); // Получаем текущий маршрут
+
 
   useEffect(() => {
     const btnHeader = document.querySelectorAll(
